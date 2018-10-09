@@ -19,7 +19,10 @@ export default {
   methods:{
     toPDF(){
       wq_html2pdf({
-        elem:"#hello"
+        elem:"#hello",
+        seccess:(url)=>{
+          window.open(url,"pdf",'toolbar=no, status=yes, location=no')
+        }
       })
     }
   }
